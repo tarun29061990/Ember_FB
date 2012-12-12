@@ -8,4 +8,4 @@ This application is coded in Ember.js because i love the way ember sings... :D :
 
 I hosted this app on  http://minifb.comuv.com/   ... check it out.. :D :D
 
-Right Now working on Ember and facebook api ... will update this app soon... :D
+Right Now working on Ember.js and facebook api ... will update this app soon... :D
