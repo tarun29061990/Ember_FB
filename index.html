@@ -1,0 +1,48 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<title>FB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://cloud.github.com/downloads/emberjs/ember.js/ember-0.9.6.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+
+	
+	<script type="text/x-handlebars">
+		<div id="frm">
+			<b>Load Content for: </b>
+			{{view App.SearchTextField placeholder="Facebook Username" valueBinding="App.contentController.username"}}
+			<button {{action "loadThings" target="App.contentController"}}>Go!</button>
+		</div>
+		<div id="content">
+			<div id="recent">
+				<h3>Recent Users</h3>
+				<ol>
+					{{#each App.recentUsersController.reverse}}
+						<li>
+							<a href="#" title="view again" {{action "searchAgain" target="App.recentUsersController"}}>{{this}}</a>
+							<a href="#" title="remove" {{action "removeUser" target="App.recentUsersController"}}>X</a>
+						</li>
+					{{/each}}
+				</ol>
+			</div>
+			<div id="things">
+				<h3>Content</h3>
+				<ul>
+					{{#each App.contentController}}
+						<li>
+							
+							<p>{{name}} 
+							<img {{bindAttr src="avatar"}} alt="pic"/></p>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</script>
+
+</body>
+</html>
