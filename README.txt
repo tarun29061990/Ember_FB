@@ -5,3 +5,5 @@ Now your facebook username is the one which appears on your profile link. Go to 
 and there is your facebook username.... :D
 
 This application is coded in Ember.js because i love the way ember sings... :D :D
+
+I hosted this app on  http://minifb.comuv.com/   ... check it out.. :D :D
